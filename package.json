@@ -10,7 +10,9 @@
   "author": "Steven Raden",
   "license": "ISC",
   "dependencies": {
+    "browser-sync": "^2.10.1",
     "express": "^4.13.3",
+    "gulp": "^3.9.0",
     "hbs": "^4.0.0"
   }
 }
