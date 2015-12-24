@@ -13,6 +13,10 @@
     "browser-sync": "^2.10.1",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
-    "hbs": "^4.0.0"
+    "hbs": "^4.0.0",
+    "nodemon": "^1.8.1"
+  },
+  "devDependencies": {
+    "gulp-nodemon": "^2.0.4"
   }
 }
