@@ -3,6 +3,10 @@ var express = require("express");
 var app = express();
 var path = require("path");
 
+//Keep information private by storing in a config file. Make sure to add config file to gitignore
+var conf = require("./config");
+console.log("accessing a config file", conf);
+
 var hbs = require("hbs"); //Render handlebars
 
 app.use('/public', express.static(__dirname + '/public')); //Configure the root of the folder
@@ -15,7 +19,7 @@ app.get("/", function (req, res) {
 });
 
 app.get("/Hi", function (req, res) {
-	res.render("index", {name:"bob", greeting:"jonathan"}); //Handlebars stuff
+	res.render(path.join(__dirname, "public", "views", "index.html"), {name:"bob", greeting:"jonathan"}); //Handlebars stuff
 });
 
 app.listen(8008, function () {
