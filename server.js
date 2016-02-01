@@ -4,8 +4,9 @@ var app = express();
 var path = require("path");
 
 //Keep information private by storing in a config file. Make sure to add config file to gitignore
-var conf = require("./config");
-console.log("accessing a config file", conf);
+if (process.env.NODE_ENV == "development") { //Set process env vars in gulp/node start node NODE_ENV=dev server.js
+	var conf = require("./config");
+}
 
 var hbs = require("hbs"); //Render handlebars
 
