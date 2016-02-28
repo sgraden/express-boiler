@@ -4,7 +4,7 @@ var app = express();
 var path = require("path");
 
 //Keep information private by storing in a config file. Make sure to add config file to gitignore
-if (process.env.NODE_ENV == "development") { //Set process env vars in gulp/node start node NODE_ENV=dev server.js
+if (process.env.NODE_ENV == "development") { //Set process env vars in gulp/node export NODE_ENV=dev server.js
 	var conf = require("./config");
 }
 
@@ -23,6 +23,6 @@ app.get("/Hi", function (req, res) {
 	res.render(path.join(__dirname, "public", "views", "index.html"), {name:"bob", greeting:"jonathan"}); //Handlebars stuff
 });
 
-app.listen(8008, function () {
+app.listen(8080, function () {
 	console.info('Server listening on port ' + this.address().port);
 });
