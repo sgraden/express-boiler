@@ -1,7 +1,7 @@
 {
-  "name": "express-test",
+  "name": "boiler",
   "version": "1.0.0",
-  "description": "Simple Test for Express",
+  "description": "boiler-plate",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,13 +10,13 @@
   "author": "Steven Raden",
   "license": "ISC",
   "dependencies": {
-    "browser-sync": "^2.10.1",
+    "body-parser": "^1.15.0",
     "express": "^4.13.3",
     "gulp": "^3.9.0",
-    "hbs": "^4.0.0",
-    "nodemon": "^1.8.1"
+    "hbs": "^4.0.0"
   },
   "devDependencies": {
+    "browser-sync": "^2.11.1",
     "gulp-nodemon": "^2.0.4",
     "gulp-sass": "^2.2.0"
   }

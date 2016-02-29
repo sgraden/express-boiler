@@ -1,5 +1,6 @@
+//Should .gitignore this in real world use
 var config = {};
-config.twitter = {
+config.password = {
   "example": "this is an example config"
 };
 
