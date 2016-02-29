@@ -1,5 +1,5 @@
-// $myColorTest: blue;
-// @import 'components/test';
-// body {
-    // background-color: $myColorTest;
-// }
+$myColorTest: green;
+@import 'components/test';
+body {
+    background-color: $myColorTest;
+}

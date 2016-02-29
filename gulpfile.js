@@ -1,6 +1,7 @@
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var nodemon = require('gulp-nodemon');
+var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 
 
@@ -40,10 +41,12 @@ gulp.task('default', ['build', 'watch', 'browser-sync', 'nodemon']);
 ////////////////////
 gulp.task('sass', function() {
     return gulp.src(dirs.sass)
+        .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.write('./maps')) //Write srcMaps to relative dir
         .pipe(gulp.dest(dirs.public.css))
         .pipe(browserSync.stream());
-    //.pipe(browserSync.stream({match: '**/*.css'}));
+    //.pipe(browserSync.stream({match: '**/*.css'}));?
 });
 
 gulp.task('html', function() {
