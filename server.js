@@ -30,7 +30,7 @@ app.engine("html", hbs.__express); //set view engine to handlebars
 ///// Routes
 ////////////////////
 app.get("/", function (req, res) {
-	res.render(path.join(__dirname, "public", "views", "index.html"), {name:"asdf", greeting:"asdf"}); //Handlebars stuff
+	res.render(path.join(__dirname, "public", "views", "index.html"), {name:"What, my name is", greeting:"Slim Shady"}); //Handlebars stuff
 });
 
 app.listen(8080, function () {
